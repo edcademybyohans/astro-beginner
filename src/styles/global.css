@@ -9,7 +9,7 @@ html {
 html.dark {
   --background: black;
   --gray-200: #eaeaea;
-  --gray-400: #888888;
+  --gray-400: #acacac;
   --gray-600: #ffffff;
   --gray-900: #fafafa;
 }
