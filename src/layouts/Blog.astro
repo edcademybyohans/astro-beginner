@@ -1,0 +1,56 @@
+---
+import "../styles/global.css";
+
+const { poster, title, subtitle } = Astro.props.frontmatter;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <figure class="figure">
+        <img src={poster} class="figure__image" />
+        <figcaption class="figure__caption">
+          Poster image for {title.toLowerCase()}
+        </figcaption>
+      </figure>
+
+      <h1>{title}</h1>
+      <h2>{subtitle}</h2>
+
+      <slot />
+    </main>
+  </body>
+</html>
+
+<style>
+  h1 + h2 {
+    margin-bottom: 3rem;
+  }
+
+  .figure {
+    margin: 0;
+  }
+
+  .figure__image {
+    max-width: 100%;
+    border-radius: 10px;
+  }
+
+  .figure__caption {
+    font-size: 0.9rem;
+    opacity: 0.5;
+  }
+</style>
