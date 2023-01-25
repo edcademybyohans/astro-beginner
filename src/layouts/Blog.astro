@@ -10,6 +10,7 @@ const { poster, title, subtitle } = Astro.props.frontmatter;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
+    <meta name="description" content="Frau Katarina's blog" />
     <title>Astro</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -21,7 +22,7 @@ const { poster, title, subtitle } = Astro.props.frontmatter;
   <body>
     <main>
       <figure class="figure">
-        <img src={poster} class="figure__image" />
+        <img src={poster} class="figure__image" alt="" />
         <figcaption class="figure__caption">
           Poster image for {title.toLowerCase()}
         </figcaption>
