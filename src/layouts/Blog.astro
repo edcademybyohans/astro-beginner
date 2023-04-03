@@ -22,7 +22,13 @@ const { poster, title, subtitle } = Astro.props.frontmatter;
   <body>
     <main>
       <figure class="figure">
-        <img src={poster} class="figure__image" alt="" />
+        <img
+          src={poster}
+          class="figure__image"
+          alt=""
+          width="640px"
+          height="480px"
+        />
         <figcaption class="figure__caption">
           Poster image for {title.toLowerCase()}
         </figcaption>
